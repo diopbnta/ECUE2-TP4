@@ -69,4 +69,14 @@ public class Triangle extends Figure {
 
         return Math.sqrt(dx * dx + dy * dy);
     }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "A=" + A +
+                ", B=" + B +
+                ", C=" + C +
+                ", point=" + point +
+                '}';
+    }
 }

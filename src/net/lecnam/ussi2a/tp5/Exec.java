@@ -10,13 +10,17 @@ public class Exec {
 
     public static void main(String[] args) {
         Point p = new Point(2,3);
-        Point p1 = new Point(3,9);
+        Point p1 = new Point(0,9);
+        Point p2 = new Point(5,9);
+        Point p3 = new Point(5,-10);
 
         Rectangle r  = new Rectangle(2,3,p);
         Disque d = new Disque(p,3);
+        Triangle t = new Triangle(p3,p2,p1);
 
         dessin.ajout(r);
         dessin.ajout(d);
+        dessin.ajout(t);
 
 
         System.out.println(dessin.retourneSurfaceTotale());
