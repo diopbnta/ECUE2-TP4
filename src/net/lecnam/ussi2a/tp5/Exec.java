@@ -12,20 +12,22 @@ public class Exec {
         Point p = new Point(2,3);
         Point p1 = new Point(0,9);
         Point p2 = new Point(5,9);
-        Point p3 = new Point(5,-10);
+        Point p3 = new Point(5,0);
 
         Rectangle r  = new Rectangle(2,3,p);
         Disque d = new Disque(p,3);
         Triangle t = new Triangle(p3,p2,p1);
+        RectangleIncline rectangleIncline = new RectangleIncline(20,30,p,45);
 
         dessin.ajout(r);
         dessin.ajout(d);
         dessin.ajout(t);
+        dessin.ajout(rectangleIncline);
 
 
         System.out.println(dessin.retourneSurfaceTotale());
         System.out.println(dessin.retournePlusGrand());
-        System.out.println(dessin.contient(p1));
+        System.out.println(dessin.contient(p));
 
     }
 
