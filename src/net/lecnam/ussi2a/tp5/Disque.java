@@ -1,16 +1,26 @@
 package net.lecnam.ussi2a.tp5;
 
-public class Disque extends Figure{
+public class Disque extends Figure implements Inclinable{
     Point centre;
     double rayon;
     double pi = Math.PI;
-
+    double angle = 0 ;
 
     public Disque(Point centre, double rayon)  {
         this.centre = centre;
         this.rayon = rayon;
     }
-@Override
+    @Override
+    public double getAngle() {
+        return this.angle;
+    }
+
+    @Override
+    public void pivoter(double degres) {
+        this.angle += degres;
+    }
+
+    @Override
     void translate (double x, double y){
         this.centre.translate(x,y);
     }
