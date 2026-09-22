@@ -1,14 +1,14 @@
 package net.lecnam.ussi2a.tp5;
 
 
-public class Rectangle {
+public class Rectangle extends Figure {
 
     double longueur;
     double largeur;
     Point point;
 
 
-    Rectangle(double longueur, double largeur, Point point) {
+    public Rectangle(double longueur, double largeur, Point point) {
         this.longueur = longueur;
         this.largeur = largeur;
         this.point = point;
@@ -17,19 +17,22 @@ public class Rectangle {
     Rectangle(double longueur, double largeur, double x, double y) {
         this(longueur, largeur, new Point(x, y));
     }
-
+@Override
     double retourneSurface(){
         return this.longueur *this.largeur;
     }
 
+@Override
     double retournePerimetre(){
         return 2 * (this.longueur + this.largeur);
     }
 
+@Override
     void translate(double x, double y){
         this.point.translate(x,y);
     }
 
+@Override
     boolean contient(Point point){
         return point.x >= this.point.x
                 && point.x <= this.point.x+ longueur
